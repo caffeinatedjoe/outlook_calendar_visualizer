@@ -66,8 +66,21 @@ The Calendar Visualizer is a Python script that generates an Excel-based calenda
       ```
 
 5.  **Zscaler Certificate (If applicable):**
-    - If your network uses Zscaler for SSL inspection, you will need to provide the Zscaler root certificate.
-    - Download the certificate and place it in the root directory as `zscaler_root.crt`. The script is pre-configured to use this path for verification.
+    - If your network uses Zscaler for SSL inspection, you will need to provide the Zscaler root certificate to avoid SSL errors.
+
+    - **How to export the certificate:**
+      1.  **Open Windows Certificate Manager**:
+          - Press `Win + R`, type `certmgr.msc`, and press Enter.
+      2.  **Locate the Zscaler root certificate**:
+          - In the left panel, navigate to `Trusted Root Certification Authorities` > `Certificates`.
+          - Find the certificate named `Zscaler Root CA` (or similar).
+      3.  **Export the certificate**:
+          - Double-click the certificate to open its details.
+          - Go to the `Details` tab and click `Copy to File...`.
+          - In the Certificate Export Wizard, select `Base-64 encoded X.509 (.CER)`.
+          - Save the file as `zscaler_root.crt`.
+
+    - **Important**: Place the exported `zscaler_root.crt` file in the root directory of this project. The script is pre-configured to use this path for verification.
 
 ## Usage
 
