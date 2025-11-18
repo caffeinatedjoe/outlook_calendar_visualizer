@@ -1,3 +1,5 @@
 employees.json
 config.py
 zscaler_root.crt
+*.xlsx
+__pycache__/
