@@ -1,0 +1,4 @@
+requests
+ics
+google-generativeai
+openpyxl
